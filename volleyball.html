@@ -1,0 +1,144 @@
+<!doctype html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Timer</title>
+    <!-- CSS files -->
+    <link href="./dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="./dist/css/demo.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="./dist/css/timer.css">
+  </head>
+  <body class="border-primary d-flex flex-column theme-dark v-game"> 
+    <div class="page page-center page-timer demo-wrap">
+      <div class="container-fluid position-relative">
+            <!-- <h5 class="title text-center">KABANKALAN CATHOLIC COLLEGE BASKETBALL LEAGUE</h5>  -->
+            <div class="d-flex justify-content-start">
+              <div class="col text-center">
+                <h3 class="v-team mb-0 py-0" id="TEAM-A">TEAM A</h3>
+                <label class="v-time-out">**</label>
+                <div class="d-flex justify-content-end align-items-center" style="margin-top: -2.5em;">
+                  <div class="btn-group-vertical position-absolute" style="margin-right: 5.6em;" role="group" aria-label="Vertical button group">
+                    <button type="button" class="btn btn-dark btn-sm py-5 add-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-code-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 12h6"></path><path d="M12 9v6"></path><path d="M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1v-4a2 2 0 0 1 2-2"></path><path d="M18 19a2 2 0 0 0 2-2v-4l1-1-1-1v-4a2 2 0 0 0-2-2"></path></svg>
+                    </button>
+                    <button type="button" class="btn btn-dark btn-sm py-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-code-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 12h6"></path><path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2"></path><path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2"></path></svg>
+                    </button>
+                  </div>
+                  <div class="v-score position-relative text-center cursor-pointer disable-select"  id="score_left">00</div> 
+                </div>
+              </div>
+              <div class="col-2 text-center">
+                <div class="v-points mt-0">0-0</div>
+                <div class="v-set">1st</div>
+                <button class="btn btn-dark btn-lg btn-pill" data-bs-toggle="modal" data-bs-target="#modal-settings">Menu</button>
+                <div class="v-timer">00</div>
+                <button class="btn btn-lime btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+  <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+</svg></button>
+              </div>
+              <div class="col text-center">
+                <h3 class="v-team mb-0 py-0" id="TEAM-B">TEAM B</h3>
+                <label class="v-time-out">**</label>
+                <div class="d-flex justify-content-start align-items-center" style="margin-top: -2.5em;">
+                  <div class="v-score position-relative text-center cursor-pointer disable-select"  id="score_left">00</div> 
+                  <div class="btn-group-vertical position-absolute" style="margin-left: 5.6em;" role="group" aria-label="Vertical button group">
+                    <button type="button" class="btn btn-dark btn-sm py-5 add-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-code-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 12h6"></path><path d="M12 9v6"></path><path d="M6 19a2 2 0 0 1-2-2v-4l-1-1 1-1v-4a2 2 0 0 1 2-2"></path><path d="M18 19a2 2 0 0 0 2-2v-4l1-1-1-1v-4a2 2 0 0 0-2-2"></path></svg>
+                    </button>
+                    <button type="button" class="btn btn-dark btn-sm py-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-code-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 12h6"></path><path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2"></path><path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center gap-4 text-center score-sets mb-0">
+              <div class="col-auto set-1">
+                <small class="v-label">1st</small>
+                <div class="v-set-score">00-00</div>
+              </div>
+              <div class="col-auto set-1">
+                <small class="v-label">2nd</small>
+                <div class="v-set-score">00-00</div>
+              </div>
+              <div class="col-auto set-1">
+                <small class="v-label">3rd</small>
+                <div class="v-set-score">00-00</div>
+              </div>
+              <div class="col-auto set-1">
+                <small class="v-label">4th</small>
+                <div class="v-set-score">00-00</div>
+              </div> 
+            </div> 
+      </div>
+    </div>
+    <div class="modal modal-blur" id="modal-setTime" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content  modal-dark ">
+          <div class="modal-header">
+            <h5 class="modal-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path><circle cx="12" cy="12" r="3"></circle></svg> Set Time</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body ">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Min</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Set Minutes" id="setMin">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Sec</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Set Seconds" id="setSec">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn me-auto btn-warning" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn" id="setTime" data-bs-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-blur v-modal" id="modal-settings" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content  modal-dark ">
+          <div class="modal-header">
+            <h5 class="modal-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path><circle cx="12" cy="12" r="3"></circle></svg> Settings</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body ">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="5.65" y1="5.65" x2="18.35" y2="18.35"></line><line x1="5.65" y1="18.35" x2="18.35" y2="5.65"></line><path d="M12 3a9 9 0 0 0 9 9"></path><path d="M3 12a9 9 0 0 1 9 9"></path></svg></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Team A" id="teamA">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="5.65" y1="5.65" x2="18.35" y2="18.35"></line><line x1="5.65" y1="18.35" x2="18.35" y2="5.65"></line><path d="M12 3a9 9 0 0 0 9 9"></path><path d="M3 12a9 9 0 0 1 9 9"></path></svg></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Team B" id="teamB">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn me-auto btn-warning" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn" id="setTime" data-bs-dismiss="modal" onclick="setSettings()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/js/volleyball.js"></script>
+    <!-- Libs JS -->
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js"></script>
+    <script src="./dist/js/demo.min.js"></script>
+  </body>
+</html>
