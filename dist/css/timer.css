@@ -162,4 +162,12 @@ margin-bottom: 0;
 .v-label{
 	/*font-family: 'Consolas';*/
 	font-size: 2rem;
-} 
+}
+@media only screen and (max-width: 600px) {
+  html {
+	font-size: .5rem;
+  }
+.modal { 
+    transform: scale(2.2);
+}
+}
